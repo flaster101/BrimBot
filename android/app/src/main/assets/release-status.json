@@ -1,0 +1,8 @@
+{
+  "schema": 1,
+  "version": "0.1.0-preview",
+  "qualified": false,
+  "model_sha256": null,
+  "reason": "Autonomous play is not yet validated. This preview keeps game controls disabled.",
+  "requirements": ["held-out perception evaluation", "critical hazard recall", "path validation", "Android inference parity", "closed-loop device runs"]
+}

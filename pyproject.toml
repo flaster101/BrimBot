@@ -1,0 +1,14 @@
+[project]
+name = "brimbot"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = ["numpy>=1.26", "pillow>=10", "opencv-python-headless>=4.10"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+acquisition = ["yt-dlp>=2026.8.19"]
+training = ["torch>=2.5", "torchvision>=0.20", "onnx>=1.17", "onnxruntime>=1.20"]

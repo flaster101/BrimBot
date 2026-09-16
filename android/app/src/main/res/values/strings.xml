@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">BrimBot</string>
+    <string name="accessibility_description">BrimBot uses swipes and taps to control Blades of Brim while you choose to run it. It checks which app is open so it can stop acting when you leave the game. Screen images are processed on your phone. You can stop BrimBot at any time from its notification.</string>
+</resources>

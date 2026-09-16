@@ -1,0 +1,14 @@
+<resources>
+    <style name="Theme.BrimBot" parent="android:style/Theme.Material.NoActionBar">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:statusBarColor">#101918</item>
+        <item name="android:navigationBarColor">#101918</item>
+        <item name="android:windowActionModeOverlay">true</item>
+    </style>
+    <style name="Theme.BrimBot.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">#101918</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_brimbot</item>
+        <item name="postSplashScreenTheme">@style/Theme.BrimBot</item>
+    </style>
+</resources>
