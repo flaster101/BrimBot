@@ -1,0 +1,17 @@
+{
+  "python": {
+    "tests": 45,
+    "failures": 0,
+    "skipped": 0
+  },
+  "kotlin": {
+    "tests": 12,
+    "failures": 0,
+    "skipped": 0
+  },
+  "android": {
+    "tests": 4,
+    "failures": 0,
+    "skipped": 0
+  }
+}

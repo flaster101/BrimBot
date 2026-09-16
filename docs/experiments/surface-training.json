@@ -1,0 +1,187 @@
+{
+  "candidates": [
+    {
+      "name": "tiny",
+      "train_frames": 30,
+      "validation_frames": 19,
+      "ground_truth_frames": 0,
+      "pseudo_precision": 0.9489182692307693,
+      "pseudo_recall": 0.9893040948758112,
+      "pseudo_iou": 0.9392819205438708,
+      "pseudo_confusion": [
+        [
+          88323,
+          1190
+        ],
+        [
+          239,
+          22106
+        ]
+      ],
+      "pseudo_val_loss": 0.03490496426820755,
+      "history": [
+        {
+          "epoch": 1,
+          "train_loss": 0.6919279545545578,
+          "pseudo_val_loss": 0.6854538917541504
+        },
+        {
+          "epoch": 2,
+          "train_loss": 0.6793832927942276,
+          "pseudo_val_loss": 0.6657377481460571
+        },
+        {
+          "epoch": 3,
+          "train_loss": 0.6526387333869934,
+          "pseudo_val_loss": 0.6251984238624573
+        },
+        {
+          "epoch": 4,
+          "train_loss": 0.6000217348337173,
+          "pseudo_val_loss": 0.5560683012008667
+        },
+        {
+          "epoch": 5,
+          "train_loss": 0.521620623767376,
+          "pseudo_val_loss": 0.4550129175186157
+        },
+        {
+          "epoch": 6,
+          "train_loss": 0.3970327526330948,
+          "pseudo_val_loss": 0.3312534689903259
+        },
+        {
+          "epoch": 7,
+          "train_loss": 0.28490041196346283,
+          "pseudo_val_loss": 0.21148870885372162
+        },
+        {
+          "epoch": 8,
+          "train_loss": 0.1680153962224722,
+          "pseudo_val_loss": 0.1218540370464325
+        },
+        {
+          "epoch": 9,
+          "train_loss": 0.10645983926951885,
+          "pseudo_val_loss": 0.07435333728790283
+        },
+        {
+          "epoch": 10,
+          "train_loss": 0.06054725684225559,
+          "pseudo_val_loss": 0.05161714553833008
+        },
+        {
+          "epoch": 11,
+          "train_loss": 0.04036698117852211,
+          "pseudo_val_loss": 0.04278365522623062
+        },
+        {
+          "epoch": 12,
+          "train_loss": 0.03292488260194659,
+          "pseudo_val_loss": 0.03710900992155075
+        },
+        {
+          "epoch": 13,
+          "train_loss": 0.03562437370419502,
+          "pseudo_val_loss": 0.03490496426820755
+        },
+        {
+          "epoch": 14,
+          "train_loss": 0.030512074008584023,
+          "pseudo_val_loss": 0.0358772836625576
+        },
+        {
+          "epoch": 15,
+          "train_loss": 0.03506599646061659,
+          "pseudo_val_loss": 0.035588011145591736
+        }
+      ],
+      "desktop_median_ms": 4.558950000500772,
+      "desktop_p95_ms": 6.283935001556528,
+      "bytes": 38980,
+      "torch_onnx_max_abs_error": 2.384185791015625e-07,
+      "elapsed_s": 12.357579800009262
+    },
+    {
+      "name": "mobilenet",
+      "train_frames": 30,
+      "validation_frames": 19,
+      "ground_truth_frames": 0,
+      "pseudo_precision": 0.9764951051662305,
+      "pseudo_recall": 0.9017229805325576,
+      "pseudo_iou": 0.8825667980727113,
+      "pseudo_confusion": [
+        [
+          89028,
+          485
+        ],
+        [
+          2196,
+          20149
+        ]
+      ],
+      "pseudo_val_loss": 0.13007771968841553,
+      "history": [
+        {
+          "epoch": 1,
+          "train_loss": 0.63152015209198,
+          "pseudo_val_loss": 0.5090779066085815
+        },
+        {
+          "epoch": 2,
+          "train_loss": 0.48814108967781067,
+          "pseudo_val_loss": 0.3722177743911743
+        },
+        {
+          "epoch": 3,
+          "train_loss": 0.36596622318029404,
+          "pseudo_val_loss": 0.26452046632766724
+        },
+        {
+          "epoch": 4,
+          "train_loss": 0.2596110552549362,
+          "pseudo_val_loss": 0.18909615278244019
+        },
+        {
+          "epoch": 5,
+          "train_loss": 0.17881366983056068,
+          "pseudo_val_loss": 0.14458106458187103
+        },
+        {
+          "epoch": 6,
+          "train_loss": 0.1287761703133583,
+          "pseudo_val_loss": 0.13007771968841553
+        },
+        {
+          "epoch": 7,
+          "train_loss": 0.09165134094655514,
+          "pseudo_val_loss": 0.13249731063842773
+        },
+        {
+          "epoch": 8,
+          "train_loss": 0.06721821334213018,
+          "pseudo_val_loss": 0.1385706514120102
+        },
+        {
+          "epoch": 9,
+          "train_loss": 0.04764894209802151,
+          "pseudo_val_loss": 0.15276452898979187
+        },
+        {
+          "epoch": 10,
+          "train_loss": 0.032451351173222065,
+          "pseudo_val_loss": 0.147104412317276
+        }
+      ],
+      "desktop_median_ms": 4.404800005431753,
+      "desktop_p95_ms": 6.3352599972859,
+      "bytes": 69123,
+      "torch_onnx_max_abs_error": 2.2649765014648438e-06,
+      "elapsed_s": 10.873236200000974
+    }
+  ],
+  "selected": "tiny",
+  "qualified": false,
+  "warning": "All agreement metrics use pseudo labels. None measures gap/hazard recall or safe path accuracy.",
+  "test_used": false
+}

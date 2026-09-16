@@ -1,0 +1,14 @@
+{
+  "teacher": "CIDAS/clipseg-rd64-refined",
+  "revision": "999e0328d9e10b484360c477313983f9afdd7050",
+  "prompts": [
+    "ground",
+    "grass"
+  ],
+  "selected": 72,
+  "accepted": 19,
+  "elapsed_seconds": 355.11472389999835,
+  "ground_truth_count": 0,
+  "test_used": false,
+  "limitation": "Prompt/flow agreement is not calibrated accuracy and cannot certify safe paths."
+}

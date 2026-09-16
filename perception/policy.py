@@ -52,7 +52,7 @@ class Policy:
         if not w.perception_validated:
             return hold("PERCEPTION_NOT_QUALIFIED")
         values=[w.phase_confidence,w.lane_confidence,*w.safe,*w.rewards]
-        if any(not math.isfinite(v) for v in values) or len(w.safe)!=3 or len(w.rewards)!=3:
+        if any(not math.isfinite(v) or not 0<=v<=1 for v in values) or len(w.safe)!=3 or len(w.rewards)!=3:
             return hold("INVALID_OBSERVATION")
         if not 0<=now-w.timestamp_ms<=250:
             return hold("STALE_FRAME")

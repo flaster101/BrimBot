@@ -82,7 +82,7 @@ class MainActivity : ComponentActivity() {
             notifications.launch(Manifest.permission.POST_NOTIFICATIONS)
         } else requestScreen()
     }
-    private fun requestScreen() {
+    internal fun requestScreen() {
         val manager=getSystemService(MediaProjectionManager::class.java)
         // Whole-display capture provides an unambiguous relation to screen-space
         // gestures. Android still owns the explicit consent UI for every session.
@@ -116,7 +116,7 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }) { insets ->
-            Column(Modifier.padding(insets).fillMaxSize().verticalScroll(rememberScrollState()).padding(24.dp),verticalArrangement=Arrangement.spacedBy(20.dp)) {
+            Column(Modifier.padding(insets).fillMaxSize().verticalScroll(rememberScrollState()).padding(24.dp),verticalArrangement=Arrangement.spacedBy(16.dp)) {
                 Row(verticalAlignment=Alignment.CenterVertically) {
                     Image(painterResource(R.drawable.ic_brimbot),null,Modifier.size(46.dp))
                     Spacer(Modifier.width(10.dp))
@@ -128,10 +128,8 @@ class MainActivity : ComponentActivity() {
                 }
                 when(page) {
                     "Play" -> {
-                        Spacer(Modifier.height(10.dp))
                         Eyebrow("SURVIVAL COMES FIRST")
                         Text("A steadier path\nthrough Brim.",fontSize=34.sp,lineHeight=40.sp,fontWeight=FontWeight.SemiBold)
-                        Text("Built to read the world, choose a safe path, and keep the adventure going.",fontSize=16.sp,lineHeight=24.sp,color=Muted)
                         Card(colors=CardDefaults.cardColors(containerColor=Surface),shape=RoundedCornerShape(24.dp)) {
                             Column(Modifier.padding(22.dp),verticalArrangement=Arrangement.spacedBy(13.dp)) {
                                 Text("●  ${status.title}",color=if(status.running) Mint else Gold,fontWeight=FontWeight.SemiBold,fontSize=18.sp)
@@ -143,6 +141,7 @@ class MainActivity : ComponentActivity() {
                                 Text("Observation only. You play; BrimBot watches.",fontSize=12.sp,color=Muted)
                             }
                         }
+                        Text("Built to read the world, choose a safe path, and keep the adventure going.",fontSize=16.sp,lineHeight=24.sp,color=Muted)
                         InfoCard("Game controls are not ready", "This preview cannot reliably identify every hazard or game state. It will not send gameplay gestures.")
                         if(status.frames>0) InfoCard("This session", "${status.frames} frames observed on your phone. No screen recording is saved.")
                         TextButton(onClick={packageManager.getLaunchIntentForPackage(GestureService.GAME)?.let { startActivity(it) } ?: run { error="Blades of Brim is not installed." }}) { Text("Open Blades of Brim  →") }

@@ -1,11 +1,38 @@
 # BrimBot
 
-An Android visual player for **Blades of Brim**, designed around survival first.
+Native Android research toward a screen-only visual player for **Blades of Brim**.
 
-**Development status: not yet validated for autonomous gameplay.** A working
-APK build is not evidence that a bot can survive a run. See [EVALUATION.md](EVALUATION.md)
-for measured results and release gates. No game assets, modified game APKs,
-memory access, or hooks are used.
+**Version 0.1.0-preview observes the screen; it does not play the game.** The
+requested autonomous bot is unfinished. Game controls are disabled because
+enemy, hazard, player and safe-path recognition are not qualified. See
+[EVALUATION.md](EVALUATION.md) for measured results and missing gameplay evidence.
+No game assets, modified game APKs, memory access, or hooks are used.
+
+## Preview APK
+
+[Release and APK](https://github.com/flaster101/BrimBot/releases/tag/v0.1.0-preview)
+· Android 8.0 or later · universal APK · local inference · no internet permission
+
+Install `BrimBot.apk`, complete onboarding and use **START PREVIEW**. Android asks
+for the game-window/accessibility setting, notifications and screen sharing.
+Blades of Brim must be installed separately. You play the game yourself; this
+release only observes. Stop from BrimBot or its notification. No training,
+model selection, coordinate setup or external Python service is required.
+
+## What has been verified
+
+- 45 Python tests and 12 Kotlin/JVM tests pass.
+- Four Android 15 emulator tests pass: app navigation/permission cancellation,
+  missing-consent rejection, real capture consent/rotation/notification Stop,
+  and Python-to-Android model output parity within 0.0001 absolute error.
+- Two surface models were actually trained and compared. The packaged custom
+  CNN is 38,980 bytes, trained on 30 pseudo-labeled frames with 19 validation
+  frames. Its 93.93% pseudo IoU measures teacher agreement, not safe navigation.
+- Six screen geometries and both tensor layouts have numerical transform tests.
+
+There is no demonstrated autonomous survival, enemy-detection accuracy or
+physical-phone performance. See [delivery status](docs/STATUS.md) and the
+[model card](MODEL_CARD.md) before interpreting the preview.
 
 ## Product
 

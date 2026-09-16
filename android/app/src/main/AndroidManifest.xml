@@ -3,9 +3,9 @@
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <queries><package android:name="com.sybogames.brim" /></queries>
-    <application android:theme="@style/Theme.BrimBot.Starting" android:label="BrimBot"
+    <application android:theme="@style/Theme.BrimBot.Starting" android:label="@string/app_name"
         android:icon="@drawable/ic_brimbot" android:roundIcon="@drawable/ic_brimbot"
-        android:allowBackup="false" android:supportsRtl="true">
+        android:allowBackup="false" android:dataExtractionRules="@xml/data_extraction_rules" android:supportsRtl="true">
         <activity android:name=".MainActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

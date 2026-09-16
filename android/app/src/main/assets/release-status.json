@@ -2,7 +2,13 @@
   "schema": 1,
   "version": "0.1.0-preview",
   "qualified": false,
-  "model_sha256": null,
-  "reason": "Autonomous play is not yet validated. This preview keeps game controls disabled.",
-  "requirements": ["held-out perception evaluation", "critical hazard recall", "path validation", "Android inference parity", "closed-loop device runs"]
+  "model_sha256": "93c18534529ec75e395cb5abee4298b7e8319727de5eeb2f4748e3ffbf0729a3",
+  "reason": "Observation preview only. State, hazards and safe paths are not qualified; game controls stay disabled.",
+  "requirements": [
+    "held-out perception evaluation",
+    "critical hazard recall",
+    "path validation",
+    "Android inference parity",
+    "closed-loop device runs"
+  ]
 }

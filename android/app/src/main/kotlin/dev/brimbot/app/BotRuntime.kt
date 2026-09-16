@@ -5,7 +5,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import org.json.JSONObject
 
-data class BotStatus(val running: Boolean = false, val title: String = "Preview ready", val detail: String = "Autonomous play is still being validated.", val frames: Long = 0, val latencyMs: Long = 0)
+data class BotStatus(val running: Boolean = false, val title: String = "Preview ready", val detail: String = "Observe the game on your phone. Automatic controls are disabled.", val frames: Long = 0, val latencyMs: Long = 0)
 object BotRuntime {
     private val mutable = MutableStateFlow(BotStatus())
     val status = mutable.asStateFlow()

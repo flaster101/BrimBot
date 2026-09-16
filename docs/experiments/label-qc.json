@@ -1,0 +1,10 @@
+{
+  "train": {
+    "total": 80,
+    "accepted": 30
+  },
+  "val": {
+    "total": 72,
+    "accepted": 19
+  }
+}

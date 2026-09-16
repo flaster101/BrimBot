@@ -143,3 +143,25 @@ threshold is treated as current truth.
 - Menu/loading/pause/death labels and negative screens.
 - UI localization, pet availability, powerup expiry and mission OCR accuracy.
 - Closed-loop survival on a real Android device. Video replay cannot establish it.
+
+## Direct visual observations of the supplied video
+
+The locally decoded 360×640 frames establish the following observations, separate
+from text-source claims. Times refer to the supplied video, not the beginning
+of a fresh game run.
+
+- 0–76 s: pause overlay with level progress, a pet/wizard objective, settings,
+  End Run and Resume; the visible game background does not imply active play.
+- 79–90 s: resumed running on green and stone paths, purple enemies and armored
+  enemies, strong combat effects and HUD occlusion.
+- 91–99 s: a large winged mount visibly changes the player silhouette and
+  obscures the near path. Ground-only player templates would fail here.
+- 106–136 s: a different world and an on-screen combo objective; a bright portal
+  transition at approximately 136 s.
+- 242–272 s: vivid pink/purple crystal environment. A green-ground-only model
+  cannot cover this world.
+- Around 325 s: visible objective text explicitly labels rolls as “swipe down”.
+
+These frames do not reveal touch events. They confirm appearance and UI states,
+not exact input timing, hit counts or causality. The source starts mid-run with
+many visible effects; it is unsuitable as the sole basis of a general bot.

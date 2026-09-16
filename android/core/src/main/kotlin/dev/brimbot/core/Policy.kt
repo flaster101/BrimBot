@@ -30,7 +30,7 @@ class DecisionEngine {
         fun hold(reason: String) = Decision(Action.NONE, reason)
         if (!w.perceptionValidated) return hold("PERCEPTION_NOT_QUALIFIED")
         if (w.safe.size != 3 || w.rewards.size != 3 ||
-            (w.safe + w.rewards + listOf(w.phaseConfidence, w.laneConfidence)).any { !it.isFinite() })
+            (w.safe + w.rewards + listOf(w.phaseConfidence, w.laneConfidence)).any { !it.isFinite() || it !in 0f..1f })
             return hold("INVALID_OBSERVATION")
         if (nowMs - w.timestampMs !in 0..250) return hold("STALE_FRAME")
         if (w.phase != Phase.PLAYING || w.phaseConfidence < .95f || w.phaseConfirmations < 3)
