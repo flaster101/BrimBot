@@ -19,6 +19,8 @@ Blades of Brim must be installed separately. You play the game yourself; this
 release only observes. Stop from BrimBot or its notification. No training,
 model selection, coordinate setup or external Python service is required.
 
+<img src="docs/images/home.png" alt="BrimBot observation preview on Android" width="280" />
+
 ## What has been verified
 
 - 45 Python tests and 12 Kotlin/JVM tests pass.
@@ -29,6 +31,8 @@ model selection, coordinate setup or external Python service is required.
   CNN is 38,980 bytes, trained on 30 pseudo-labeled frames with 19 validation
   frames. Its 93.93% pseudo IoU measures teacher agreement, not safe navigation.
 - Six screen geometries and both tensor layouts have numerical transform tests.
+- Separate-source replay: 21,096 decoded / 7,032 analyzed frames over about
+  704 seconds. All actions withheld; no autonomous survival claim.
 
 There is no demonstrated autonomous survival, enemy-detection accuracy or
 physical-phone performance. See [delivery status](docs/STATUS.md) and the

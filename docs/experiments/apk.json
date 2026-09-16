@@ -1,0 +1,10 @@
+{
+  "apk": "BrimBot.apk",
+  "version": "0.1.0-preview",
+  "bytes": 75238537,
+  "sha256": "a38d34dcd61646b85de6ef50cdcc02b2f0c7f5768507151799fe45adc1524887",
+  "model_sha256": "93c18534529ec75e395cb5abee4298b7e8319727de5eeb2f4748e3ffbf0729a3",
+  "model_bytes": 38980,
+  "qualified": false,
+  "packaged_model_matches": true
+}

@@ -12,6 +12,10 @@ Android used an x86_64 Android 15 / API 35 emulator. The model parity test compa
 every output pixel to Python-generated golden values at absolute tolerance 1e-4.
 Capture testing uses Android's actual system consent, checks receipt of a frame,
 rotates the activity and invokes the notification's Stop pending intent.
+The signed, minified release APK also installed and cold-launched successfully
+on that emulator. APK signature v2 verifies, and its model SHA-256 matches the
+tested asset. Release lint completed with zero errors and 12 warnings (dependency
+updates, older-API attributes and KTX suggestions).
 
 - Python tests exercise policy priorities, abstention, unsafe reward avoidance,
   pet conservation, cooldowns, oscillation, stale frames, malformed observations,
@@ -31,6 +35,21 @@ Object-detection mAP50/mAP50–95, real per-class enemy/hazard precision and rec
 safe-path reliability, rare-mechanic reliability, physical-device thermal/FPS
 measurements and autonomous survival time have **not** been established.
 Pseudo-label agreement is not substituted for these metrics.
+
+## Separate-source recorded replay
+
+After freezing model selection, the complete separate TapGameplay tutorial was
+decoded (21,096 source frames, approximately 704 seconds). Analysis selected every
+third frame: **7,032 frames at 9.99 Hz**, matching the app's 10 Hz ceiling. The
+annotated local video and per-frame trace preserve time, state, model candidates,
+action and reason. Model inference took a desktop median 4.24 ms / p95 13.18 ms
+during concurrent build/emulator work; this excludes decoding and preprocessing.
+
+All 7,032 decisions were `NONE / PERCEPTION_NOT_QUALIFIED`. Event audit found zero
+issued actions and explicitly records `abstained_entirely: true`. **This is not a
+successful gameplay run**: survival, enemy mAP and hazard recall remain unknown.
+See [replay report](docs/experiments/heldout-replay.json). Earlier partial runs
+were used to profile replay processing, never to choose model weights/thresholds.
 
 ## Release qualification
 

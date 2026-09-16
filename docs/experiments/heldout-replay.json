@@ -1,0 +1,21 @@
+{
+  "frames": 7032,
+  "decoded_frames": 21096,
+  "analysis_fps": 9.99000999000999,
+  "source_fps": 29.97002997002997,
+  "start_s": 0,
+  "end_s": 704,
+  "actions": {
+    "NONE": 7032
+  },
+  "desktop_median_ms": 4.236150001815986,
+  "desktop_p95_ms": 13.177635004103642,
+  "elapsed_s": 962.1795409999904,
+  "autonomous_gameplay_success": false,
+  "survival_duration": null,
+  "detector_map50": null,
+  "detector_map50_95": null,
+  "hazard_recall": null,
+  "failure": "No qualified state, enemy, player or safe-path estimator. All controls withheld.",
+  "evaluation_kind": "recorded-frame integration and abstention test, not closed-loop gameplay"
+}

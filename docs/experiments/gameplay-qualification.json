@@ -1,0 +1,26 @@
+{
+  "independent_ground_truth": false,
+  "test_untouched_before_final_evaluation": true,
+  "android_parity_passed": true,
+  "device_lifecycle_passed": false,
+  "closed_loop_runs": 0,
+  "tested_devices": 0,
+  "gesture_outside_gameplay": 0,
+  "critical_class_counts": {
+    "gap": 0,
+    "rock": 0,
+    "crusher": 0,
+    "projectile": 0
+  },
+  "qualified": false,
+  "failed": [
+    "independent_ground_truth",
+    "device_lifecycle_passed",
+    "critical_hazard_recall_lower95",
+    "safe_path_precision_lower95",
+    "state_precision_lower95",
+    "closed_loop_runs",
+    "tested_devices",
+    "critical_class_coverage"
+  ]
+}
